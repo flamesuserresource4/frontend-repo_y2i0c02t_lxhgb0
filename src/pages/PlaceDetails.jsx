@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../api";
+import { motion } from "framer-motion";
 
 export default function PlaceDetails(){
   const { slug } = useParams();
@@ -29,9 +30,9 @@ export default function PlaceDetails(){
 
   return (
     <main className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-10">
-      <h1 className="text-3xl font-bold text-slate-900">{place.name}</h1>
+      <motion.h1 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="text-3xl font-bold text-slate-900">{place.name}</motion.h1>
       <div className="text-slate-600 mt-2 capitalize">{place.category} · Best season: {place.best_season}</div>
-      <div className="mt-6 h-64 bg-slate-100 rounded-2xl"/>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className="mt-6 h-64 bg-slate-100 rounded-2xl"/>
 
       {weather && (
         <section className="mt-6 rounded-2xl border border-slate-200 p-4 bg-white">

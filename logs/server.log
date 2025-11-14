@@ -3,7 +3,59 @@
 > vite
 
 
-  VITE v5.4.20  ready in 318 ms
+  VITE v5.4.20  ready in 372 ms
 
   ➜  Local:   http://localhost:3000/
   ➜  Network: http://172.20.44.49:3000/
+12:31:53 PM [vite] Pre-transform error: Transform failed with 1 error:
+/home/workspace/src/components/Navbar.jsx:30:158: ERROR: Expected "}" but found ")"
+12:31:54 PM [vite] ✨ new dependencies optimized: framer-motion
+12:31:54 PM [vite] ✨ optimized dependencies changed. reloading
+12:32:34 PM [vite] Pre-transform error: Transform failed with 1 error:
+/home/workspace/src/components/Navbar.jsx:30:158: ERROR: Expected "}" but found ")"
+12:32:39 PM [vite] Internal server error: Transform failed with 1 error:
+/home/workspace/src/components/Navbar.jsx:30:158: ERROR: Expected "}" but found ")"
+  Plugin: vite:esbuild
+  File: /home/workspace/src/components/Navbar.jsx:30:158
+  
+  Expected "}" but found ")"
+  28 |  
+  29 |          <nav className="hidden md:flex gap-6 text-slate-700">
+  30 |            <NavLink to="/places" className={({isActive})=>`flex items-center gap-2 hover:text-slate-900 transition ${isActive?"text-slate-900 font-semibold":"")}`}><MapPin size={18}/>Places</NavLink>
+     |                                                                                                                                                                ^
+  31 |            <NavLink to="/tours" className={({isActive})=>`flex items-center gap-2 hover:text-slate-900 transition ${isActive?"text-slate-900 font-semibold":"")}`}><CalendarFold size={18}/>Tours</NavLink>
+  32 |            <NavLink to="/cars" className={({isActive})=>`flex items-center gap-2 hover:text-slate-900 transition ${isActive?"text-slate-900 font-semibold":"")}`}><Car size={18}/>Cars</NavLink>
+  
+      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
+      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Readable.push (node:internal/streams/readable:390:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+12:33:31 PM [vite] Internal server error: Transform failed with 1 error:
+/home/workspace/src/components/Navbar.jsx:30:158: ERROR: Expected "}" but found ")"
+  Plugin: vite:esbuild
+  File: /home/workspace/src/components/Navbar.jsx:30:158
+  
+  Expected "}" but found ")"
+  28 |  
+  29 |          <nav className="hidden md:flex gap-6 text-slate-700">
+  30 |            <NavLink to="/places" className={({isActive})=>`flex items-center gap-2 hover:text-slate-900 transition ${isActive?"text-slate-900 font-semibold":"")}`}><MapPin size={18}/>Places</NavLink>
+     |                                                                                                                                                                ^
+  31 |            <NavLink to="/tours" className={({isActive})=>`flex items-center gap-2 hover:text-slate-900 transition ${isActive?"text-slate-900 font-semibold":"")}`}><CalendarFold size={18}/>Tours</NavLink>
+  32 |            <NavLink to="/cars" className={({isActive})=>`flex items-center gap-2 hover:text-slate-900 transition ${isActive?"text-slate-900 font-semibold":"")}`}><Car size={18}/>Cars</NavLink>
+  
+      at failureErrorWithLog (/home/workspace/node_modules/esbuild/lib/main.js:1472:15)
+      at /home/workspace/node_modules/esbuild/lib/main.js:755:50
+      at responseCallbacks.<computed> (/home/workspace/node_modules/esbuild/lib/main.js:622:9)
+      at handleIncomingPacket (/home/workspace/node_modules/esbuild/lib/main.js:677:12)
+      at Socket.readFromStdout (/home/workspace/node_modules/esbuild/lib/main.js:600:7)
+      at Socket.emit (node:events:508:28)
+      at addChunk (node:internal/streams/readable:559:12)
+      at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+      at Readable.push (node:internal/streams/readable:390:5)
+      at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)

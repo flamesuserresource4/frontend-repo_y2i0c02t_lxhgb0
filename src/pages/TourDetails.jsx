@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api, formatINR } from "../api";
+import { motion } from "framer-motion";
 
 export default function TourDetails(){
   const { slug } = useParams();
@@ -18,9 +19,9 @@ export default function TourDetails(){
 
   return (
     <main className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-10">
-      <h1 className="text-3xl font-bold text-slate-900">{tour.title}</h1>
+      <motion.h1 initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }} className="text-3xl font-bold text-slate-900">{tour.title}</motion.h1>
       <div className="text-slate-600 mt-2">{formatINR(tour.price)} · {tour.duration_days} days · Max {tour.max_guests} guests</div>
-      <div className="mt-6 h-64 bg-slate-100 rounded-2xl"/>
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className="mt-6 h-64 bg-slate-100 rounded-2xl"/>
 
       <section className="mt-8 grid gap-6 md:grid-cols-3">
         <div className="md:col-span-2">
@@ -30,8 +31,9 @@ export default function TourDetails(){
           </ul>
         </div>
         <aside className="md:col-span-1">
-          <div className="rounded-2xl border border-slate-200 p-4 bg-white">
-            <div className="text-xl font-semibold">{formatINR(tour.price)}</div>
+          <div className="rounded-2xl border border-slate-200 p-4 bg-white sticky top-24">
+            <div className="text-sm text-slate-500">Price</div>
+            <div className="text-2xl font-semibold">{formatINR(tour.price)}</div>
             <button className="mt-4 w-full px-4 py-2 rounded-xl bg-slate-900 text-white hover:bg-slate-800">Book now</button>
           </div>
         </aside>
